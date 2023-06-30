@@ -7,7 +7,7 @@ var start=false;
 $(document).keydown(function(){
     if(!start){
     // $("h1").text("level "+level);
-    // $("p").text("");
+    $("p").text("");
     nextSequence();
     start=true;
 }})
@@ -50,31 +50,31 @@ function animation(name)
     }, 100);
 }
 
-// function check(currentLevel)
-// {
-//     if (gamepattern[currentLevel] === userpattern[currentLevel]) {
+function check(currentLevel)
+{
+    if (gamepattern[currentLevel] === userpattern[currentLevel]) {
 
-//         // console.log("success");  
-//         if (userpattern.length === gamepattern.length){  
+        // console.log("success");  
+        if (userpattern.length === gamepattern.length){  
           
-//           setTimeout(function () {
-//             nextSequence();
-//           }, 1500);
+          setTimeout(function () {
+            nextSequence();
+          }, 1100);
   
-//         }
+        }
   
-//       } else {
-//         $("body").addClass("game-over");
-//         setTimeout(function(){
-//             $("body").removeClass("game-over");
-//         }, 200);
-//         // console.log("wrong");
-//         $("h1").text("Game Over!");
-//         $("p").text("Press any key to Restart!");
-//         startover();
+      } else {
+        $("body").addClass("game-over");
+        setTimeout(function(){
+            $("body").removeClass("game-over");
+        }, 200);
+        // console.log("wrong");
+        $("h1").text("Game Over!");
+        $("p").text("Press any key to Restart!");
+        startover();
   
-//       }
-// }
+      }
+}
 
 function startover()
 {
